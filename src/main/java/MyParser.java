@@ -17,7 +17,6 @@ public class MyParser {
 
     public void parse(){
         boolean enteredScriptTag = false;
-        boolean enteredStyleTag = false;
         boolean enteredTag = false;
         boolean enteredHTMLComment = false;
         boolean enteredJsComment = false;
@@ -35,13 +34,13 @@ public class MyParser {
                     //get the considered string
                     String considering = s.next();
 
-                    // CSS FILTERTING -- needs to be first to avoid html filtering next
-                    if(considering.matches("<style>")) enteredStyleTag = true;
-                    if(considering.matches("</style>")){
-                        enteredStyleTag = false;
-                        continue;
-                    }
-                    if(enteredStyleTag) continue;
+//                    // CSS FILTERTING -- needs to be first to avoid html filtering next
+//                    if(considering.matches("<style>")) enteredStyleTag = true;
+//                    if(considering.matches("</style>")){
+//                        enteredStyleTag = false;
+//                        continue;
+//                    }
+//                    if(enteredStyleTag) continue;
 
 
                     //HTML FILTERING
@@ -64,11 +63,6 @@ public class MyParser {
                     }
                     if(enteredHTMLComment) continue;
 
-
-
-
-
-
                     //JAVASCRIPT FILTERING
                     // If the the line is Javascript (i.e. it ends in a ';') continue.
                     if (considering.matches(".*;$")) continue;
@@ -83,12 +77,17 @@ public class MyParser {
 
 
 //                    // Filter misc characters
-                    if(considering.matches("\\W+")) continue;
+                    if(considering.matches("^\\W+$")) continue;
 //                     remove any words that start with, or have a . in the middle of their word.
-                    if(considering.matches(".*[.].+")) continue;
+                    if(considering.matches(".+[.].+")) continue;
 
                     System.out.println(considering);
                     count += 1;
+
+                    // Assume that the word passed is, infact, a word. Stem.
+
+
+
                 }
                 s.close();
             }
@@ -99,6 +98,7 @@ public class MyParser {
         // w beginning tags 6786 -> w.o. 1246
         // without js, 1172
         // without JS comments 394
+        // without style tag
         System.out.println(count);
 
     }

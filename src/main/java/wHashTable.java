@@ -4,28 +4,26 @@ import org.jsoup.nodes.Document;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.Map;
 
 public class wHashTable {
     public static void main(String[] args) throws IOException {
 
-        ValueObject val = new ValueObject("testString", 0);
+//        ValueObject val = new ValueObject("testString", 0);
+//        val.print();
 
-        val.print();
+        // Create Hashtable
+        Map<String, ValueObject> ht = new Hashtable<String, ValueObject>();
 
         // Create path to file directory
         File dir =  new File("src/main/resources/");
 
-        // Shows something weird
-//        System.out.println(dir.listFiles());
-
-        // Show all files in path dir
-//        for (File curr: dir.listFiles()){
-//            System.out.println(curr);
-//        }
-
         ArrayList<String> wordsInList = new ArrayList<String>();
+        int count;
 
-        // Read html file
+        // Read all html files in 'dir' directory
         for (File curr: dir.listFiles()){
             File input = new File(curr.toString());
             // Parse text
@@ -33,13 +31,22 @@ public class wHashTable {
             // get only text
             String allWords = page.text();
 
+            count = 0;
             // Split allWords string into an array. Each word is an element in the new array.
-            for( String e: allWords.split(" ")){
-                wordsInList.add(e);
+            for( String keyWord: allWords.split(" ")){
+                // use each word in array as an index,
+                ValueObject val = new ValueObject(curr.toString(), count);
+                ht.put(keyWord, val);
+                count += 1;
             }
         }
 
-        //Show length -- currently now currently 1668
-        System.out.println(wordsInList.size());
+        Object[] sortedKeys = ht.keySet().toArray();
+        Arrays.sort(sortedKeys);
+        for( Object e: sortedKeys ){
+            System.out.println(e);
+        }
+
+
     }
 }

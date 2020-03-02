@@ -22,5 +22,7 @@ public class ValueObject {
         System.out.println(val[0] + "  " + val[1]);
     }
 
+    public String toString(){ return val[0] + " " + val[1];}
+
 
 }

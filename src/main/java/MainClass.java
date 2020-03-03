@@ -10,33 +10,14 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class wHashTable {
-
-    public static void dumpInvertedIndex(Map<String, ArrayList<ValueObject>> ht){
-        Object[] sortedKeys = ht.keySet().toArray();
-        Arrays.sort(sortedKeys);
-        for( Object e: sortedKeys ){
-            System.out.print(e.toString());
-            for (ValueObject x: ht.get(e)){
-                System.out.print(" " + x.toString());
-            }
-            System.out.println();
-        }
-    }
-
-
-
+public class MainClass {
 
     public static void main(String[] args) throws IOException {
-
-//        ValueObject val = new ValueObject("testString", 0);
-//        val.print();
 
         InvertedIndex invertedIdx = new InvertedIndex();
         MyParser p = new MyParser();
         // Path to all htmlfiles
         File dir =  new File("src/main/resources/");
-        ArrayList<String> wordsInList = new ArrayList<String>();
         int positionCount;
         String allWords;
         PorterStemmer ps = new PorterStemmer();

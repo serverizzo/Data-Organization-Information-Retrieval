@@ -13,7 +13,6 @@ public class InvertedIndex {
     Map<String, ArrayList<ValueObject>> ht = new Hashtable<String, ArrayList<ValueObject>>();
 
     public void readFromFile(String path){
-
         try{
             FileInputStream fis = new FileInputStream(path);
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -22,7 +21,6 @@ public class InvertedIndex {
         catch(Exception e){
             System.out.println("From InvertedIndex: " + e);
         }
-
     }
 
     public void saveToFile(){

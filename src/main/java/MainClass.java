@@ -11,11 +11,18 @@ public class MainClass {
         // Create cmd line interface for querying an object
 
         // Create Cmd line interface for recalling object
-        // read in Object
-        InvertedIndex i = new InvertedIndex();
-        i.readFromFile("serializedInvertedIndex.txt");
-        i.dumpInvertedIndex();
-        return;
+
+        // read in Saved Inverted index Object
+//        InvertedIndex i = new InvertedIndex();
+//        i.readFromFile("serializedInvertedIndex.txt");
+//        i.dumpInvertedIndex();
+//        return;
+
+        //Read in Saved StopWordHashTable and Dump Contents
+        StopWordHashTable swht = new StopWordHashTable();
+        swht.readInStopWordObject("stopWordHashSetObject.txt");
+        swht.dumpStopWords();
+
     }
 
 }

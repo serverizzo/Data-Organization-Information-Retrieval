@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0658b19-dc49-41e3-8634-e67affd357f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BuildStopWordHashTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StopWordHashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BuildInvertedIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildInvertedIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Different Ways to Make Electricity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/corpus/Different Ways to Make Electricity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/howToMakeElectricity.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/corpus/howToMakeElectricity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StopWordHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StopWordHashTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

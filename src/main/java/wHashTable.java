@@ -1,3 +1,4 @@
+//import jdk.vm.ci.meta.Value;
 import opennlp.tools.stemmer.PorterStemmer;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,12 +11,28 @@ import java.util.Hashtable;
 import java.util.Map;
 
 public class wHashTable {
+
+    public static void dumpInvertedIndex(Map<String, ArrayList<ValueObject>> ht){
+        Object[] sortedKeys = ht.keySet().toArray();
+        Arrays.sort(sortedKeys);
+        for( Object e: sortedKeys ){
+            System.out.print(e.toString());
+            for (ValueObject x: ht.get(e)){
+                System.out.print(" " + x.toString());
+            }
+            System.out.println();
+        }
+    }
+
+
+
+
     public static void main(String[] args) throws IOException {
 
 //        ValueObject val = new ValueObject("testString", 0);
 //        val.print();
 
-        Map<String, ValueObject> ht = new Hashtable<String, ValueObject>();
+        InvertedIndex invertedIdx = new InvertedIndex();
         MyParser p = new MyParser();
         // Path to all htmlfiles
         File dir =  new File("src/main/resources/");
@@ -35,26 +52,16 @@ public class wHashTable {
             String[] allWordsArray = allWords.split( " ");
             for( String keyWord: allWordsArray){
 
-//                System.out.println("from HashTable: " + keyWord);
-
-                // Stem word
-
-
-
                 //Split the String into an array, each value is a word, catalog it and its index number.
                 keyWord = ps.stem(keyWord);
                 ValueObject val = new ValueObject(curr.toString(), positionCount);
+                invertedIdx.add(keyWord,val);
+
                 // TODO Currently we are overwriting each put, we need to append to each.
-                ht.put(keyWord, val);
                 positionCount += 1;
             }
         }
 
-        Object[] sortedKeys = ht.keySet().toArray();
-        Arrays.sort(sortedKeys);
-        for( Object e: sortedKeys ){
-            System.out.println(e.toString() + " " + ht.get(e).toString());
-        }
 
 
     }

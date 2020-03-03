@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0658b19-dc49-41e3-8634-e67affd357f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/InvertedIndex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wHashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/wHashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wHashTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildInvertedIndex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,14 @@
       <recent name="C:\Users\Edward\IdeaProjects\phase1\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.wHashTable">
+  <component name="RunManager" selected="Application.BuildInvertedIndex">
+    <configuration name="BuildInvertedIndex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BuildInvertedIndex" />
+      <module name="phase1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyParser" />
       <module name="phase1" />
@@ -85,16 +89,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="wHashTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wHashTable" />
-      <module name="phase1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.wHashTable" />
+        <item itemvalue="Application.BuildInvertedIndex" />
         <item itemvalue="Application.MyParser" />
         <item itemvalue="Application.fromMultiple" />
         <item itemvalue="Application.helloworld" />
@@ -123,22 +120,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="566" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1583077234931" />
-    <state width="1557" height="195" key="GridCell.Tab.0.bottom" timestamp="1583193326598">
+    <state width="1557" height="195" key="GridCell.Tab.0.bottom" timestamp="1583193898866">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="195" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583193326598" />
-    <state width="1557" height="195" key="GridCell.Tab.0.center" timestamp="1583193326598">
+    <state width="1557" height="195" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1583193898866" />
+    <state width="1557" height="195" key="GridCell.Tab.0.center" timestamp="1583193898866">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="195" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1583193326598" />
-    <state width="1557" height="195" key="GridCell.Tab.0.left" timestamp="1583193326598">
+    <state width="1557" height="195" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1583193898866" />
+    <state width="1557" height="195" key="GridCell.Tab.0.left" timestamp="1583193898866">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="195" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1583193326598" />
-    <state width="1557" height="195" key="GridCell.Tab.0.right" timestamp="1583193326598">
+    <state width="1557" height="195" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1583193898866" />
+    <state width="1557" height="195" key="GridCell.Tab.0.right" timestamp="1583193898866">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="195" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1583193326598" />
+    <state width="1557" height="195" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1583193898866" />
     <state x="0" y="172" key="Maven.ArtifactSearchDialog" timestamp="1583120387595">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

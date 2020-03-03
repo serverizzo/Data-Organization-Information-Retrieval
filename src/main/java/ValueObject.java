@@ -1,4 +1,6 @@
-public class ValueObject {
+import java.io.Serializable;
+
+public class ValueObject implements Serializable {
 
 //    String documentFoundIn;
 //    Integer position;

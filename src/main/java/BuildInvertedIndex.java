@@ -3,8 +3,7 @@ import opennlp.tools.stemmer.PorterStemmer;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Hashtable;
@@ -12,10 +11,11 @@ import java.util.Map;
 
 public class BuildInvertedIndex {
 
-    public static void main(String[] args) throws IOException {
+    BuildInvertedIndex(File dir) throws IOException {
 
-        // Path to all htmlfiles
-        File dir =  new File("src/main/resources/");
+
+//    public static void main(String[] args){
+//        File dir =  new File("src/main/resources/");
         InvertedIndex invertedIdx = new InvertedIndex();
         MyParser p = new MyParser();
         int positionCount;
@@ -49,7 +49,7 @@ public class BuildInvertedIndex {
             }
         }
 
-
-
+        invertedIdx.saveToFile();
+//        System.out.println("object serialized");
     }
 }

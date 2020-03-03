@@ -15,7 +15,7 @@ public class BuildInvertedIndex {
 
 
 //    public static void main(String[] args){
-//        File dir =  new File("src/main/resources/");
+//        File dir =  new File("src/main/resources/corpus");
         InvertedIndex invertedIdx = new InvertedIndex();
         MyParser p = new MyParser();
         int positionCount;

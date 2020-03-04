@@ -11,13 +11,13 @@ import java.util.Map;
 
 public class BuildInvertedIndex {
 
-    BuildInvertedIndex(File dir) throws IOException {
-
-
-//    public static void main(String[] args){
-//        File dir =  new File("src/main/resources/corpus");
+//    BuildInvertedIndex(File dir) throws IOException {
+    public static void main(String[] args){
+        File dir =  new File("src/main/resources/corpus");
         InvertedIndex invertedIdx = new InvertedIndex();
         MyParser p = new MyParser();
+        StopWordHashTable swht = new StopWordHashTable();
+        swht.readInStopWordObject("stopWordHashSetObject.txt");
         int positionCount;
         String allWords;
         PorterStemmer ps = new PorterStemmer();
@@ -39,13 +39,24 @@ public class BuildInvertedIndex {
             String[] allWordsArray = allWords.split( " ");
             for( String keyWord: allWordsArray ){
 
+                // Must be first, stopwords are filtered in the inverted index but are not omitted from count
+                positionCount += 1;
+
+                // Filter Stopwords
+                if(swht.contains(keyWord))
+                    continue;
+
+                //Make lowercase (not done by stemmer)
+                keyWord = keyWord.toLowerCase();
+
                 // Stem keyWord
                 keyWord = ps.stem(keyWord);
+
                 // Create Value object
                 ValueObject val = new ValueObject(curr.toString(), positionCount);
+
                 // Add key and value to inverted index
                 invertedIdx.add(keyWord,val);
-                positionCount += 1;
             }
         }
 

@@ -7,8 +7,6 @@ import java.util.*;
 public class StopWordHashTable {
     Set<String> stopWords = new HashSet<String>();
 
-//    public StopWordHashTable{}
-
     public void add(String s){
         stopWords.add(s);
     }

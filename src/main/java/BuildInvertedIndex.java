@@ -11,19 +11,19 @@ import java.util.Map;
 
 public class BuildInvertedIndex {
 
-//    BuildInvertedIndex(File dir) throws IOException {
-    public static void main(String[] args){
-        File dir =  new File("src/main/resources/corpus");
+    BuildInvertedIndex(File HTMLdir, String StopwordPath) throws IOException {
+//    public static void main(String[] args){
+//        File dir =  new File("src/main/resources/corpus");
         InvertedIndex invertedIdx = new InvertedIndex();
         MyParser p = new MyParser();
         StopWordHashTable swht = new StopWordHashTable();
-        swht.readInStopWordObject("stopWordHashSetObject.txt");
+        swht.readInStopWordObject(StopwordPath);
         int positionCount;
         String allWords;
         PorterStemmer ps = new PorterStemmer();
 
         // Read all html files in 'dir' directory
-        for (File curr: dir.listFiles()){
+        for (File curr: HTMLdir.listFiles()){
 
             // Get the next HTML doc
             File input = new File(curr.toString());

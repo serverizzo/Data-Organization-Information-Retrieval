@@ -4,11 +4,15 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class BuildStopWordHashTable {
+    public void BuildStopWordHashTable(/* */) {
+    }
 
 
-    public static void main(String[] args){
-//    public BuildStopWordHashTable(/* */) {
-        // Read from file
+
+
+//    public static void main(String[] args){
+    public void build(/* */) {
+//         Read from file
         File inputFile = new File("src/main/resources/stopwords_en.txt");
         StopWordHashTable swht = new StopWordHashTable();
         try {

@@ -46,14 +46,15 @@ public class InvertedIndex {
 
     public void query(String s){
         ArrayList<ValueObject> alvo = ht.get(s);
-        //Not working
-        if (null == alvo){
-            System.out.println("Word is not in inverted index");
+        try{
+            Object[] alvoArr = alvo.toArray();
+            for (Object e : alvoArr){
+                ValueObject ve = (ValueObject)e;
+                ve.print();
+            }
         }
-        Object[] alvoArr = alvo.toArray();
-        for (Object e : alvoArr){
-            ValueObject ve = (ValueObject)e;
-            ve.print();
+        catch(Exception e){
+            System.out.println("Query does not exist in inverted index");
         }
 
     }

@@ -4,11 +4,6 @@
     <list default="true" id="e0658b19-dc49-41e3-8634-e67affd357f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InvertedIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InvertedIndex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helloworld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helloworld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InvertedIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InvertedIndex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/helloworld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/helloworld.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

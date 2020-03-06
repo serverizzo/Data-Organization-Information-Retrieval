@@ -28,9 +28,20 @@ public class MainClass {
                 System.out.println("Stopword hashtable build written to textfile");
             }
 
+            if(arg.equals("-q")){
+                InvertedIndex i = new InvertedIndex();
+//                i.readFromFile("C:\\Users\\Edward\\IdeaProjects\\phase1\\serializedInvertedIndex.txt");
+                i.readFromFile("..\\..\\serializedInvertedIndex.txt");
+                i.query(args[1]);
+            }
+
             if(arg.equals("-di")) {
                 InvertedIndex i = new InvertedIndex();
-                i.readFromFile("serializedInvertedIndex.txt");
+                if (args.length == 2 )
+                    i.readFromFile(args[0]);
+                else
+//                   i.readFromFile("C:\\Users\\Edward\\IdeaProjects\\phase1\\serializedInvertedIndex.txt");
+                    i.readFromFile("..\\..\\serializedInvertedIndex.txt");
                 i.dumpInvertedIndex();
             }
 

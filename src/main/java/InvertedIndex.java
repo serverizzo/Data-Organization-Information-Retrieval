@@ -1,12 +1,11 @@
+//import jdk.vm.ci.meta.Value;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.*;
 
 public class InvertedIndex {
 
@@ -43,6 +42,20 @@ public class InvertedIndex {
             ht.put(keyWord, new ArrayList<ValueObject>());
             ht.get(keyWord).add(val);
         }
+    }
+
+    public void query(String s){
+        ArrayList<ValueObject> alvo = ht.get(s);
+        //Not working
+        if (null == alvo){
+            System.out.println("Word is not in inverted index");
+        }
+        Object[] alvoArr = alvo.toArray();
+        for (Object e : alvoArr){
+            ValueObject ve = (ValueObject)e;
+            ve.print();
+        }
+
     }
 
     public void dumpInvertedIndex(){
